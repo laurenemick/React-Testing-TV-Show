@@ -79,7 +79,7 @@ test('Displays episodes as the episodes prop is updated', () => {
     expect(screen.queryAllByTestId('episode')).toHaveLength(0); 
     
     rerender(<Episodes episodes={episodesData} />)
-    screen.debug();
+    // screen.debug();
 
     expect(screen.getByText(/Chapter One: The Vanishing of Will Byers/i)).toBeInTheDocument();
     expect(screen.getAllByTestId('episode')).toHaveLength(3);
