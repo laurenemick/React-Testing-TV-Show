@@ -21,6 +21,10 @@ export default function App() {
       setShow(res.data);
       setSeasons(formatSeasons(res.data._embedded.episodes));
     })
+    .catch(err => {
+      // console.error("error fetching data from api, err: ", err.message);
+      return err.message;
+    })
   }, []);
 
   const handleSelect = e => {
